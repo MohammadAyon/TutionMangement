@@ -5,14 +5,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="474.0" prefWidth="637.0" style="-fx-background-color: #1C2B4A; -fx-border-color: #00CC66;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginFormController"
->
+<AnchorPane prefHeight="474.0" prefWidth="637.0" style="-fx-background-color: #1C2B4A; -fx-border-color: #00CC66;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginFormController">
    <children>
       <VBox layoutX="86.0" layoutY="51.0" prefHeight="371.0" prefWidth="447.0" style="-fx-background-color: #1C2B4A; -fx-border-color: #00CC66;">
          <children>
@@ -84,6 +84,9 @@
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
          </children>
       </VBox>
