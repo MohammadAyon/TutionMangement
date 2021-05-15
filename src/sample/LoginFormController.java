@@ -9,7 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class LoginFormController {
-<<<<<<< Updated upstream
+
   
   @FXML // fx:id="UserNameText"
   private TextField UserNameText; // Value injected by FXMLLoader
@@ -33,7 +33,4 @@ public class LoginFormController {
   
   
 }
-=======
 
-}
->>>>>>> Stashed changes
