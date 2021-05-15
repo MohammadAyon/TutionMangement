@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1C2B4A;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AllControlers.AdminDashBoardController">
+   <children>
+      <Pane prefHeight="404.0" prefWidth="200.0" style="-fx-background-color: #17233B; -fx-border-color: #00CC66;" />
+   </children>
+</AnchorPane>

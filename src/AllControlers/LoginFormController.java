@@ -1,16 +1,21 @@
 
-package sample;
+package AllControlers;
 
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class LoginFormController {
-<<<<<<< Updated upstream
-  
+
   @FXML // fx:id="UserNameText"
   private TextField UserNameText; // Value injected by FXMLLoader
   
@@ -21,10 +26,18 @@ public class LoginFormController {
   private Button LogInButton; // Value injected by FXMLLoader
   
   @FXML
-  void handleLogInButton(ActionEvent event) {
+  public void handleLogInButton(ActionEvent actionEvent) throws Exception {
     System.out.println("logged IN");
     System.out.println(this.UserNameText.getText()+"\n"+this.passwordholder.getText());
-    
+    FXMLLoader loader =new FXMLLoader(getClass().getResource("AllFxmlFile/AdminDashBoard.fxml"));
+    AdminDashBoardController c =loader.getController();
+    Parent root = loader.load();
+    Stage stage=new Stage();
+    stage.setTitle("anything good");
+    stage.setScene(new Scene(root));
+    stage.sizeToScene();
+    stage.show();
+  
   }
   @FXML
   public void initialize(){
@@ -32,8 +45,6 @@ public class LoginFormController {
   }
   
   
+  
 }
-=======
 
-}
->>>>>>> Stashed changes
