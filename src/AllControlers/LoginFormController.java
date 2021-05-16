@@ -1,4 +1,3 @@
-
 package AllControlers;
 
 import javafx.event.ActionEvent;
@@ -11,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 public class LoginFormController {
 
   @FXML // fx:id="UserNameText"
@@ -23,19 +23,25 @@ public class LoginFormController {
   private Button LogInButton; // Value injected by FXMLLoader
   
   @FXML
-  public void handleLogInButton(ActionEvent actionEvent) throws Exception {
+  public void handleLogInButton1(ActionEvent actionEvent) throws Exception {
     System.out.println("logged IN");
     System.out.println(this.UserNameText.getText()+"\n"+this.passwordholder.getText());
-    FXMLLoader loader =new FXMLLoader(getClass().getResource("AllFxmlFile/AdminDashBoard.fxml"));
-    AdminDashBoardController Admin =loader.getController();
-    Pane root = (Pane)loader.load();
-    Stage AdminStage=new Stage();
-    Scene AdminScene=new Scene(root);
-    AdminStage.setTitle("anything good");
-    AdminStage.setScene(AdminScene);
-    AdminStage.sizeToScene();
-    AdminStage.show();
+    Stage stage1 = (Stage) LogInButton.getScene().getWindow();
+    stage1.close();
+    try {
+      Stage AdminStage= new Stage();
+      FXMLLoader loader = new FXMLLoader();
+      Pane root1= loader.load(getClass().getResource("../AllFxmlFile/AdminDashBoard.fxml").openStream());
+      
+      AdminStage.setScene(new Scene(root1));
+       AdminStage.sizeToScene();
+       AdminStage.showAndWait();
+      
   
+  
+    }catch(IOException ex){
+      ex.printStackTrace();
+    }
   }
   @FXML
   public void initialize(){
@@ -45,4 +51,3 @@ public class LoginFormController {
   
   
 }
-

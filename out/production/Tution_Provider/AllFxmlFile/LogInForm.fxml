@@ -77,7 +77,7 @@
                   </PasswordField>
                </children>
             </HBox>
-            <Button fx:id="LogInButton" mnemonicParsing="false" onAction="#handleLogInButton" prefHeight="32.0" prefWidth="210.0" style="-fx-background-color: #00CC66;" text="Log In " textFill="WHITE">
+            <Button fx:id="LogInButton" mnemonicParsing="false" onAction="#handleLogInButton1" prefHeight="32.0" prefWidth="210.0" style="-fx-background-color: #00CC66;" text="Log In " textFill="WHITE">
                <VBox.margin>
                   <Insets bottom="5.0" left="195.0" right="50.0" top="50.0" />
                </VBox.margin>

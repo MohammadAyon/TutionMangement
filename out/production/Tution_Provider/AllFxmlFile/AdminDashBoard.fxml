@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1C2B4A;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AllControlers.AdminDashBoardController">
    <children>
-      <Pane prefHeight="404.0" prefWidth="200.0" style="-fx-background-color: #17233B; -fx-border-color: #00CC66;" />
+      <Pane prefHeight="404.0" prefWidth="200.0" style="-fx-background-color: #17233B; -fx-border-color: #00CC66;">
+         <children>
+            <Label layoutX="39.0" layoutY="60.0" prefHeight="48.0" prefWidth="109.0" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="105.0" fitWidth="144.0" layoutX="31.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
    </children>
 </AnchorPane>
