@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -35,6 +36,7 @@ public class LoginFormController {
       
       AdminStage.setScene(new Scene(root1));
        AdminStage.sizeToScene();
+       AdminStage.getIcons().add(new Image("Icons.png"));
        AdminStage.showAndWait();
       
   

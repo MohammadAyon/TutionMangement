@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -11,21 +12,13 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         window=primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("AllFxmlFile/LogInForm.fxml"));
-        primaryStage.setTitle("anything good");
+        primaryStage.setTitle("Tuition Management System");
         Scene scene=new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();
+        primaryStage.getIcons().add(new Image("Icons.png"));
         primaryStage.show();
-//        FXMLLoader loader =new FXMLLoader(getClass().getResource("AllFxmlFile/AdminDashBoard.fxml"));
-//        AdminDashBoardController Admin =loader.getController();
-//        Pane root1 = (Pane)loader.load();
-//        Stage AdminStage=new Stage();
-//        Scene AdminScene=new Scene(root1);
-//        AdminStage.setTitle("anything good");
-//        AdminStage.setScene(AdminScene);
-//        AdminStage.sizeToScene();
-      //  AdminStage.show();
-        
+
     }
 
 
