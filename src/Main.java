@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         window=primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("AllFxmlFile/LogInForm.fxml"));
-        primaryStage.setTitle("Can't function properly!");
+        primaryStage.setTitle("tution management system!");
         Scene scene=new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();
