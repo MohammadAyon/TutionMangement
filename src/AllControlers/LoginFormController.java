@@ -3,6 +3,7 @@ package AllControlers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -12,6 +13,9 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 public class LoginFormController {
 
   @FXML // fx:id="UserNameText"
@@ -49,7 +53,6 @@ public class LoginFormController {
   public void initialize(){
   
   }
-  
   
   
 }

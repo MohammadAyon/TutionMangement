@@ -1,4 +1,6 @@
-package Functionalities;
+package DataClass;
+
+import java.util.Date;
 
 public class person {
  private  String firstName;
@@ -6,13 +8,13 @@ public class person {
  private String nationalId;
  private String gender;
  private String phoneNumber;
- private int dateOfBirth;
+ private Date dateOfBirth;
  private String institutionName;
  private String emailAddress;
 
  
  public person(String firstName,String lastName,String nationalId,String gender,String phoneNumber,
-               int dateOfBirth,String institutionName,String emailAddress){
+               Date dateOfBirth,String institutionName,String emailAddress){
   this.firstName=firstName;
   this.lastName=lastName;
   this.nationalId=nationalId;
@@ -53,10 +55,10 @@ public String getPhoneNumber(){
 public void setPhoneNumber(String phoneNumber){
   this.phoneNumber=phoneNumber;
 }
-public int getDateOfBirth(){
+public Date getDateOfBirth(){
   return dateOfBirth;
 }
-public void setDateOfBirth(int dateOfBirth){
+public void setDateOfBirth(Date dateOfBirth){
   this.dateOfBirth=dateOfBirth;
 }
 public String getInstitutionName(){
