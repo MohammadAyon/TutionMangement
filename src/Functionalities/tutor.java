@@ -1,9 +1,11 @@
 package Functionalities;
 
 
+import java.util.Date;
+
 public class tutor extends person {
   
-  public tutor(String firstName, String lastName, String nationalId, String gender, String phoneNumber, int dateOfBirth, String institutionName, String emailAddress) {
+  public tutor(String firstName, String lastName, String nationalId, String gender, String phoneNumber, Date dateOfBirth, String institutionName, String emailAddress) {
     super(firstName, lastName, nationalId, gender, phoneNumber, dateOfBirth, institutionName, emailAddress);
   }
   @Override
@@ -57,12 +59,12 @@ public class tutor extends person {
   }
   
   @Override
-  public int getDateOfBirth() {
+  public Date getDateOfBirth() {
     return super.getDateOfBirth();
   }
   
   @Override
-  public void setDateOfBirth(int dateOfBirth) {
+  public void setDateOfBirth(Date dateOfBirth) {
     super.setDateOfBirth(dateOfBirth);
   }
   
