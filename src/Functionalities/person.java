@@ -71,6 +71,14 @@ public String getEmailAddress(){
 public void setEmailAddress(String emailAddress){
   this.emailAddress=emailAddress;
 }
+public String toString(){
+   return "person{"+"firstName='"+firstName+'\''+
+            ",lastName='"+lastName+'\''+",nationalId='"+nationalId+'\''+",gender='"+gender+'\''+",phoneNummber='"+
+            phoneNumber+'\''+",dateOfBirth='"+dateOfBirth+'\''+",institutionName='"+institutionName+'\''+",emailAddress='"+
+            emailAddress+'\''+'}';
+   
+}
+
 
 }
 
