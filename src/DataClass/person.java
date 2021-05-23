@@ -1,10 +1,11 @@
 package DataClass;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import java.util.Date;
 
-public class person {
+public class person implements Serializable {
  private  String firstName;
  private String lastName;
  private String nationalId;
@@ -15,7 +16,7 @@ public class person {
  private String emailAddress;
 
  
- public person(String firstName,String lastName,String nationalId,String gender,String phoneNumber,
+ public person (String firstName,String lastName,String nationalId,String gender,String phoneNumber,
                Date dateOfBirth,String institutionName,String emailAddress){
   this.firstName=firstName;
   this.lastName=lastName;
@@ -26,7 +27,10 @@ public class person {
   this.institutionName=institutionName;
   this.emailAddress=emailAddress;
  }
- public String getFirstName(){
+  
+  
+  
+  public String getFirstName(){
   return firstName;
  
  }
