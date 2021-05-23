@@ -5,7 +5,7 @@ import java.util.Date;
 
 import java.util.Date;
 
-public class person implements Serializable {
+public class person{
  private  String firstName;
  private String lastName;
  private String nationalId;
