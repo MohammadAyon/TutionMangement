@@ -1,4 +1,4 @@
-package Functionalities;
+package DataClass;
 
 
 import java.util.Date;

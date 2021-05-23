@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="243.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.ErrorWindowController">
+   <children>
+      <HBox layoutY="39.0" prefHeight="119.0" prefWidth="526.0" />
+      <Label fx:id="ErrorMessage" alignment="CENTER" prefHeight="159.0" prefWidth="527.0" style="-fx-background-color: #D45659;" text="Label" textAlignment="CENTER" textFill="#f7efef" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Button fx:id="closeButton" layoutX="233.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleCloseButtonClick" style="-fx-background-color: #D45659;" text="Close" textFill="#f2eaea">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="25.0" layoutY="14.0" prefHeight="39.0" prefWidth="84.0" text="Error" textFill="#eae4e4">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
