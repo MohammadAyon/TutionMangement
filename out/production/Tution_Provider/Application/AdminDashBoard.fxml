@@ -74,14 +74,5 @@
                </children>
             </HBox>
          </children></Pane>
-      <Pane layoutX="286.0" layoutY="188.0" prefHeight="106.0" prefWidth="224.0" style="-fx-background-color: #ffffff;">
-         <children>
-            <ImageView fitHeight="83.0" fitWidth="85.0" layoutX="71.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/user.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
    </children>
 </AnchorPane>

@@ -3,13 +3,24 @@ package DataClass;
 
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class tutor extends person implements Serializable {
-  
-  public tutor(String firstName, String lastName, String nationalId, String gender, String phoneNumber, Date dateOfBirth, String institutionName, String emailAddress) {
+  private  String Academy;
+  public tutor(String firstName, String lastName, String nationalId, String gender, String phoneNumber, Date dateOfBirth, String institutionName, String emailAddress,String Academy) {
     super(firstName, lastName, nationalId, gender, phoneNumber, dateOfBirth, institutionName, emailAddress);
+    this.Academy=Academy;
   }
+  
+  public String getAcademy() {
+    return Academy;
+  }
+  
+  public void setAcademy(String academy) {
+    Academy = academy;
+  }
+  
   @Override
   public String getFirstName() {
     return super.getFirstName();

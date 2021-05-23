@@ -7,72 +7,52 @@ import java.util.regex.Pattern;
 
 import Exceptions.*;
 
+import javax.naming.InvalidNameException;
+
 public class Validations {
 
-  public static boolean nameFirst(String name) throws Exception {
-    if (isNotNull(name) && name.length() > 3) {
-      return true;
+  public static boolean isValidData(String Firstname, String LastName, LocalDate date,
+                                    String number, String EmailID, String NID, String Gender, String InistituionName,String imagePath) throws Exception {
+    if (!isNotNull(Firstname) && Firstname.length() > 3) {
+      throw new InvalidNameException("Please provide your first name properly.");
     }
 
-    throw new Exception("Please provide your first name properly.");
-  }
-
-  public static boolean nameLast(String name) throws Exception {
-    if (isNotNull(name) && name.length() > 3) {
-      return true;
+  
+    if (!isNotNull(LastName) && LastName.length() > 3) {
+      throw new InvalidNameException("Please provide your last name properly.");
     }
 
-    throw new Exception("Please provide your last name properly.");
-  }
-
-  public static boolean nationalId(String idNo) throws Exception {
-    if (isNotNull(idNo) && idNo.length() == 10) {
-      return true;
+ 
+    if (!isNotNull(NID) && NID.length() == 10) {
+      throw new InvalidNidExceptions("Please provide your nationalID properly.");
     }
 
-    throw new Exception("Please provide your nationalID properly.");
-  }
-
-  public static boolean gender(String symbol) throws Exception {
-    if (isNotNull(symbol)) {
-      return true;
+    if (!isNotNull(Gender)) {
+      throw new Exception("Please provide your gender properly.");
     }
-
-    throw new Exception("Please provide your gender properly.");
-  }
-
-  public static boolean email( String emailAddress) throws Exception{
-    if (isNotNull(emailAddress)) {
-     if( emailChecker(emailAddress) == true){
-      return true;
+    if (!isNotNull(EmailID)) {
+     if(emailChecker(EmailID)){
+       throw new InvalidEmailAddressException("Please provide your email properly.");
      }
     }
-    throw new Exception("Please provide your email properly.");
-  }
-
-  public static boolean phoneNumber(String number) throws Exception {
-    if (isNotNull(number) && number.length() > 11) {
+   
+    if (!isNotNull(number) && number.length() > 11) {
       if(numberChecker(number) == true){
-      return true;
+        throw new InvalidPhoneNumberException("Please provide your phone number properly.");
       }
     }
-    throw new Exception("Please provide your phone number properly.");
-  }
 
-  public static boolean dateOfBirth(String  date) throws Exception {
-    if (isNotNull(date)) {
-      return true;
+    if (!isNotNull(String.valueOf(date))) {
+      throw new InvalidDateException("Please provide your date of birth properly.");
     }
-
-    throw new Exception("Please provide your date of birth properly.");
-  }
-
-  public static boolean institutionName(String name) throws Exception {
-    if (isNotNull(name)) {
-      return true;
+    
+    if (!isNotNull(InistituionName)) {
+      throw new Exception("Please provide the name of your institution properly.");
     }
-
-    throw new Exception("Please provide the name of your institution properly.");
+    if (!isNotNull(imagePath)) {
+      throw new Exception("Invalid path to picture. Maybe you didn't select a path?");
+    }
+   return true;
   }
 
 
