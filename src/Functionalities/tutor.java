@@ -1,4 +1,4 @@
-package Functionalities;
+package DataClass;
 
 
 import DataClass.person;
@@ -19,7 +19,6 @@ public class tutor extends person implements Serializable {
   @Override
   public void setFirstName(String firstName) {
     super.setFirstName(firstName);
-  }
   
   @Override
   public String getLastName() {

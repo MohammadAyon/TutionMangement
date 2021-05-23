@@ -1,18 +1,19 @@
 package Validators;
 
+//import Exceptions.NullExceptions;
+
+//import Exceptions.NullExceptions;
 public class validationForLogInPage {
-  public static boolean UserName(String userIdName) throws Exception {
-    if (userIdName != null) {
-      return true;
-    }
-    throw new Exception("You did not sign in the user Name correctly!");
-  }
+  public static boolean LogInPage(String userIdName,String userPassword) throws Exception {
+    if (isNotNull(userIdName)||isNotNull(userPassword)) {
 
-  public static boolean passwordHolder(String userPassword) throws Exception {
-    if (userPassword != null) {
       return true;
+      }
+    
+      throw  new Exception("You did not sign in correctly!");
     }
-
-    throw new Exception("You did not sign in the password correctly!");
+  
+  public static boolean isNotNull(String  data) {
+    return data != null;
   }
 }

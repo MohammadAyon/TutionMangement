@@ -6,13 +6,15 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="474.0" prefWidth="637.0" style="-fx-background-color: #1C2B4A; -fx-border-color: #00CC66;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AllControlers.LoginFormController">
+<AnchorPane prefHeight="474.0" prefWidth="637.0" style="-fx-background-color: #1C2B4A; -fx-border-color: #00CC66;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.LoginFormController">
    <children>
       <VBox layoutX="86.0" layoutY="51.0" prefHeight="371.0" prefWidth="447.0" style="-fx-background-color: #1C2B4A; -fx-border-color: #00CC66;">
          <children>
@@ -27,23 +29,31 @@
             </AnchorPane>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label contentDisplay="TOP" text="User Name" textFill="WHITE">
+                  <Label contentDisplay="TOP" prefHeight="78.0" prefWidth="90.0" text="User Name" textFill="WHITE">
                      <HBox.margin>
                         <Insets bottom="10.0" left="20.0" right="50.0" />
                      </HBox.margin>
                      <padding>
-                        <Insets left="50.0" top="50.0" />
+                        <Insets bottom="-50.0" left="25.0" right="-50.0" />
                      </padding>
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="UserNameText" prefHeight="32.0" prefWidth="210.0" promptText="ENTER USER NAME" style="-fx-border-color: #00CC66; -fx-background-color: Transparent; -fx-background-color: #12192C; -fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;">
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
-                        <Insets left="-10.0" top="50.0" />
+                        <Insets left="-15.0" right="15.0" top="50.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@/user.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="UserNameText" prefHeight="32.0" prefWidth="215.0" promptText="ENTER USER NAME" style="-fx-border-color: #00CC66; -fx-background-color: Transparent; -fx-background-color: #12192C; -fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;">
+                     <HBox.margin>
+                        <Insets left="-10.0" right="-150.0" top="50.0" />
                      </HBox.margin>
                      <padding>
-                        <Insets left="10.0" />
+                        <Insets left="15.0" />
                      </padding>
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -58,18 +68,26 @@
                         <Insets bottom="10.0" left="20.0" right="50.0" />
                      </HBox.margin>
                      <padding>
-                        <Insets left="50.0" top="50.0" />
+                        <Insets bottom="-50.0" left="25.0" right="-50.0" top="50.0" />
                      </padding>
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <PasswordField fx:id="passwordholder" prefHeight="32.0" prefWidth="210.0" promptText="ENTER PASSWORD" style="-fx-border-color: #00CC66; -fx-background-color: #12192C; -fx-prompt-text-fill: #ffffff; -fx-prompt-text: #ffffff;">
+                  <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/lock.png" />
+                     </image>
                      <HBox.margin>
-                        <Insets left="-5.0" top="50.0" />
+                        <Insets left="15.0" top="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <PasswordField fx:id="passwordholder" prefHeight="32.0" prefWidth="215.0" promptText="ENTER PASSWORD" style="-fx-border-color: #00CC66; -fx-background-color: #12192C; -fx-prompt-text-fill: #ffffff; -fx-prompt-text: #ffffff;">
+                     <HBox.margin>
+                        <Insets left="5.0" top="50.0" />
                      </HBox.margin>
                      <padding>
-                        <Insets left="10.0" />
+                        <Insets left="15.0" />
                      </padding>
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -77,9 +95,9 @@
                   </PasswordField>
                </children>
             </HBox>
-            <Button fx:id="LogInButton" mnemonicParsing="false" onAction="#handleLogInButton1" prefHeight="32.0" prefWidth="210.0" style="-fx-background-color: #00CC66;" text="Log In " textFill="WHITE">
+            <Button fx:id="LogInButton" mnemonicParsing="false" onAction="#handleLogInButton1" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #00CC66;" text="Log In " textFill="WHITE">
                <VBox.margin>
-                  <Insets bottom="5.0" left="195.0" right="50.0" top="50.0" />
+                  <Insets bottom="-15.0" left="250.0" right="50.0" top="20.0" />
                </VBox.margin>
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
