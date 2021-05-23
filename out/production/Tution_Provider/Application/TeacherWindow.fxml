@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="662.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.TeacherWindowController">
+<AnchorPane prefHeight="702.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.TeacherWindowController">
    <children>
-      <VBox layoutX="219.0" layoutY="21.0" prefHeight="530.0" prefWidth="395.0">
+      <VBox layoutX="393.0" prefHeight="602.0" prefWidth="417.0" style="-fx-background-color: #D1EBFF;">
          <children>
+            <Pane prefHeight="101.0" prefWidth="395.0" style="-fx-background-color: #518DC9;">
+               <children>
+                  <Label layoutX="99.0" layoutY="16.0" prefHeight="45.0" prefWidth="192.0" style="-fx-background-color: #518DC9;" text="Register" textFill="#fffbfb">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Pane>
             <Pane prefHeight="79.0" prefWidth="414.0">
                <children>
                   <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="106.0" text="First Name">
@@ -22,17 +37,17 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="FirstName" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="414.0">
                <children>
-                  <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="106.0" text="Last Name">
+                  <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="106.0" text="Lasst Name">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="LastNameTextField" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="89.0" prefHeight="79.0" prefWidth="414.0">
@@ -42,17 +57,17 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="175.0" layoutY="27.0" prefHeight="25.0" prefWidth="198.0" />
+                  <DatePicker fx:id="DateOfBirthField" layoutX="175.0" layoutY="27.0" prefHeight="25.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="168.0" prefHeight="79.0" prefWidth="414.0">
                <children>
-                  <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="126.0" text="Phone Number">
+                  <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="126.0" text="Phone NUmber">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="PhoneNuberField" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="248.0" prefHeight="79.0" prefWidth="414.0">
@@ -62,7 +77,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="EmailFiled" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="327.0" prefHeight="79.0" prefWidth="414.0">
@@ -72,7 +87,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="NationalIdField" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="369.0" prefHeight="79.0" prefWidth="414.0">
@@ -82,26 +97,63 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ComboBox layoutX="175.0" layoutY="29.0" prefHeight="25.0" prefWidth="198.0" />
+                  <ComboBox fx:id="GenderFIeld" layoutX="175.0" layoutY="29.0" prefHeight="25.0" prefWidth="198.0" />
+                  <Pane layoutX="-9.0" layoutY="29.0" prefHeight="112.0" prefWidth="442.0">
+                     <children>
+                        <Label fx:id="IinistutionName" layoutX="28.0" layoutY="70.0" prefHeight="28.0" prefWidth="146.0" text="Inistution Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="InistutionField" layoutX="187.0" layoutY="70.0" prefHeight="28.0" prefWidth="198.0" />
+                     </children>
+                  </Pane>
                </children>
             </Pane>
-            <Pane layoutX="10.0" layoutY="380.0" prefHeight="180.0" prefWidth="395.0">
+            <Pane layoutX="10.0" layoutY="380.0" prefHeight="208.0" prefWidth="337.0">
                <children>
-                  <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="106.0" text="Image">
+                  <Label layoutX="14.0" layoutY="60.0" prefHeight="28.0" prefWidth="106.0" text="Image">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="85.0" fitWidth="126.0" layoutX="232.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
-                  <Button layoutX="96.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Choose Profile  Picture" />
-                  <ImageView fitHeight="100.0" fitWidth="166.0" layoutX="145.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fitHeight="107.0" fitWidth="175.0" layoutX="145.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fitHeight="100.0" fitWidth="126.0" layoutX="254.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
-                  <Button layoutX="119.0" layoutY="104.0" mnemonicParsing="false" text="Save" />
-                  <Button layoutX="269.0" layoutY="105.0" mnemonicParsing="false" text="Clear" />
+                  <ImageView fx:id="ImageViewerField" fitHeight="95.0" fitWidth="126.0" layoutX="233.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="ChoosePhotoButton" layoutX="93.0" layoutY="89.0" mnemonicParsing="false" onAction="#handelChoosphotoevent" prefHeight="25.0" prefWidth="95.0" text="Choose Photo" />
                </children>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
             </Pane>
          </children>
       </VBox>
+      <ListView fx:id="TutorListView" layoutX="42.0" layoutY="14.0" onMouseClicked="#handleListViewClicked" prefHeight="550.0" prefWidth="317.0" />
+      <HBox layoutX="30.0" layoutY="596.0" prefHeight="37.0" prefWidth="341.0">
+         <children>
+            <Button fx:id="editSelectedButton" mnemonicParsing="false" onAction="#handleEditSelectedButtonClicked" prefHeight="37.0" prefWidth="123.0" text="Edit Selected" />
+            <Button fx:id="viewDetailsButton" mnemonicParsing="false" onAction="#handleViewDetailsButtonClicked" prefHeight="37.0" prefWidth="124.0" text="View Details">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="deleteButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleDeleteButtonClicked" prefHeight="37.0" prefWidth="118.0" text="Delete" />
+         </children>
+      </HBox>
+      <HBox layoutX="386.0" layoutY="622.0" prefHeight="112.0" prefWidth="398.0">
+         <children>
+            <Button fx:id="SaveButton" mnemonicParsing="false" onAction="#handelSaveButtonevent" prefHeight="26.0" prefWidth="144.0" text="Save">
+               <HBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="ClearButton" mnemonicParsing="false" onAction="#handelClearButtonevent" prefHeight="26.0" prefWidth="145.0" text="Clear">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
