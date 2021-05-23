@@ -2,9 +2,9 @@ package DataClass;
 
 import java.util.Date;
 
-import java.util.Date;
-
 public class person {
+  private String UserName;
+  private String Password;
  private  String firstName;
  private String lastName;
  private String nationalId;
@@ -13,10 +13,14 @@ public class person {
  private Date dateOfBirth;
  private String institutionName;
  private String emailAddress;
-
- 
- public person(String firstName,String lastName,String nationalId,String gender,String phoneNumber,
-               Date dateOfBirth,String institutionName,String emailAddress){
+  
+  public person(String userName, String password) {
+    UserName = userName;
+    Password = password;
+  }
+  
+  public person(String firstName, String lastName, String nationalId, String gender, String phoneNumber,
+                Date dateOfBirth, String institutionName, String emailAddress){
   this.firstName=firstName;
   this.lastName=lastName;
   this.nationalId=nationalId;
@@ -26,7 +30,24 @@ public class person {
   this.institutionName=institutionName;
   this.emailAddress=emailAddress;
  }
- public String getFirstName(){
+  
+  public String getUserName() {
+    return UserName;
+  }
+  
+  public void setUserName(String userName) {
+    UserName = userName;
+  }
+  
+  public String getPassword() {
+    return Password;
+  }
+  
+  public void setPassword(String password) {
+    Password = password;
+  }
+  
+  public String getFirstName(){
   return firstName;
  
  }
@@ -75,14 +96,20 @@ public String getEmailAddress(){
 public void setEmailAddress(String emailAddress){
   this.emailAddress=emailAddress;
 }
-public String toString(){
-   return "person{"+"firstName='"+firstName+'\''+
-            ",lastName='"+lastName+'\''+",nationalId='"+nationalId+'\''+",gender='"+gender+'\''+",phoneNummber='"+
-            phoneNumber+'\''+",dateOfBirth='"+dateOfBirth+'\''+",institutionName='"+institutionName+'\''+",emailAddress='"+
-            emailAddress+'\''+'}';
-   
-}
-
-
+  
+  @Override
+  public String toString() {
+    final StringBuilder sb = new StringBuilder("person{");
+    sb.append("firstName='").append(firstName).append('\'');
+    sb.append(", lastName='").append(lastName).append('\'');
+    sb.append(", nationalId='").append(nationalId).append('\'');
+    sb.append(", gender='").append(gender).append('\'');
+    sb.append(", phoneNumber='").append(phoneNumber).append('\'');
+    sb.append(", dateOfBirth=").append(dateOfBirth);
+    sb.append(", institutionName='").append(institutionName).append('\'');
+    sb.append(", emailAddress='").append(emailAddress).append('\'');
+    sb.append('}');
+    return sb.toString();
+  }
 }
 

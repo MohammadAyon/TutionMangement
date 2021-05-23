@@ -35,33 +35,42 @@ public class LoginFormController {
     String UserName= this.UserNameText.getText();
     String password=this.passwordholder.getText();
     //Validators loginChecker=validationForLogInPage.UserName(UserName,password);
-    System.out.println();
-    try {
-      //boolean loginChecker=validationForLogInPage.UserName(UserName,password);
-      //System.out.println(loginChecker);
-      Stage stage1 = (Stage) LogInButton.getScene().getWindow();
-      stage1.close();
-        Stage AdminStage = new Stage();
-        FXMLLoader loader = new FXMLLoader();
-        Pane root1 = loader.load(requireNonNull(getClass().getResource("AdminDashBoard.fxml")).openStream());
-  
-        AdminStage.setScene(new Scene(root1));
-        AdminStage.sizeToScene();
-        AdminStage.getIcons().add(new Image("Icons.png"));
-        AdminStage.showAndWait();
-      
-  
-  
-    }catch(Exception ex){
-      //Stage errorStage = (Stage)this.LogInButton.getScene().getWindow();
-     // ErrorDialougeBox.ErrorDialogueDisplayer(ex.getMessage(),errorStage);
-     ex.printStackTrace();
+    try{
+      Validators.validationForLogInPage v =new validationForLogInPage();
+      v.UserName(UserName,password);
+      AdminStage();
+    }catch (Exception e){
+      Stage primaryStage = (Stage) this.LogInButton.getScene().getWindow();
+      ErrorDialougeBox.ErrorDialogueDisplayer(e.getMessage(),primaryStage);
     }
+    
+    
   }
   @FXML
   public void initialize(){
   
   }
-  
+  public void AdminStage(){
+    try {
+    
+      Stage stage1 = (Stage) LogInButton.getScene().getWindow();
+      stage1.close();
+      Stage AdminStage = new Stage();
+      FXMLLoader loader = new FXMLLoader();
+      Pane root1 = loader.load(requireNonNull(getClass().getResource("AdminDashBoard.fxml")).openStream());
+    
+      AdminStage.setScene(new Scene(root1));
+      AdminStage.sizeToScene();
+      AdminStage.getIcons().add(new Image("Icons.png"));
+      AdminStage.showAndWait();
+    
+    
+    
+    }catch(Exception ex){
+      //Stage errorStage = (Stage)this.LogInButton.getScene().getWindow();
+      // ErrorDialougeBox.ErrorDialogueDisplayer(ex.getMessage(),errorStage);
+      ex.printStackTrace();
+    }
+  }
   
 }
