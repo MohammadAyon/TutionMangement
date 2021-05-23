@@ -7,18 +7,18 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
+import javafx.scene.layout.Pane;
 
-import java.io.File;
-
-public class TeacherWindowController {
+public class RegisterFormController {
   
   @FXML
   private TextField FirstName;
   
   @FXML
   private TextField LastNameTextField;
+  
+  @FXML
+  private Pane LastName;
   
   @FXML
   private DatePicker DateOfBirthField;
@@ -43,14 +43,7 @@ public class TeacherWindowController {
   
   @FXML
   void handelChoosphotoevent(ActionEvent event) {
-    FileChooser fileChooser=new FileChooser();
-    Stage primaryStage=(Stage) this.ChoosePhotoButton.getScene().getWindow();
-    File selectedFile=fileChooser.showOpenDialog(primaryStage);
-    if(selectedFile!=null){
-      String selectedFilePath= selectedFile.toURI().getPath();
-      System.out.println(selectedFilePath);
-    }
-    System.out.println("Save");
+  
   }
   
 }

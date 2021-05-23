@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -7,14 +8,28 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="702.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.TeacherWindowController">
+
+<AnchorPane prefHeight="561.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.RegisterFormController">
    <children>
-      <VBox layoutX="388.0" layoutY="54.0" prefHeight="530.0" prefWidth="395.0">
+      <VBox layoutX="7.0" layoutY="7.0" prefHeight="547.0" prefWidth="392.0" style="-fx-background-color: #D1EBFF;">
          <children>
+            <Pane prefHeight="101.0" prefWidth="395.0" style="-fx-background-color: #518DC9;">
+               <children>
+                  <Label layoutX="103.0" layoutY="6.0" prefHeight="45.0" prefWidth="192.0" style="-fx-background-color: #518DC9;" text="Register" textFill="#fffbfb">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Pane>
             <Pane prefHeight="79.0" prefWidth="414.0">
                <children>
                   <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="106.0" text="First Name">
@@ -35,7 +50,7 @@
                   <TextField fx:id="LastNameTextField" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
-            <Pane layoutX="10.0" layoutY="89.0" prefHeight="79.0" prefWidth="414.0">
+            <Pane fx:id="LastName" layoutX="10.0" layoutY="89.0" prefHeight="79.0" prefWidth="414.0">
                <children>
                   <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="106.0" text="Date Of Birth">
                      <font>
@@ -85,7 +100,7 @@
                   <ComboBox fx:id="GenderFIeld" layoutX="175.0" layoutY="29.0" prefHeight="25.0" prefWidth="198.0" />
                </children>
             </Pane>
-            <Pane layoutX="10.0" layoutY="380.0" prefHeight="180.0" prefWidth="395.0">
+            <Pane layoutX="10.0" layoutY="380.0" prefHeight="182.0" prefWidth="390.0">
                <children>
                   <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="106.0" text="Image">
                      <font>
@@ -96,6 +111,29 @@
                   <Button fx:id="ChoosePhotoButton" layoutX="90.0" layoutY="65.0" mnemonicParsing="false" onAction="#handelChoosphotoevent" prefHeight="25.0" prefWidth="95.0" text="Choose Photo" />
                </children>
             </Pane>
+            <HBox prefHeight="138.0" prefWidth="390.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="163.0" text="Save" textFill="#131212">
+                     <padding>
+                        <Insets bottom="5.0" left="50.0" right="50.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="169.0" text="Button">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="50.0" right="50.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>

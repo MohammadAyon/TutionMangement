@@ -37,12 +37,11 @@ public class LoginFormController {
     //Validators loginChecker=validationForLogInPage.UserName(UserName,password);
     try{
      // Validators.validationForLogInPage v =new validationForLogInPage();
-      //v.UserName(UserName,password);
+      //UserName(UserName,password);
       AdminStage();
     }catch (Exception e){
-      System.out.println(e.getMessage());
-     Stage primaryStage = (Stage) this.LogInButton.getScene().getWindow();
-     ErrorDialougeBox.ErrorDialogueDisplayer(e.getMessage(),primaryStage);
+      Stage primaryStage = (Stage) this.LogInButton.getScene().getWindow();
+      ErrorDialougeBox.ErrorDialogueDisplayer(e.getMessage(),primaryStage);
     }
     
     
