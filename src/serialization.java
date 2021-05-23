@@ -1,10 +1,7 @@
-import DataClass.*;
+import DataClass.tutor;
 
 import java.io.*;
-import java.lang.String;
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class serialization {
   public static boolean serialized(String pathToFile, ArrayList<tutor>listOftutor){

@@ -36,8 +36,8 @@ public class LoginFormController {
     String password=this.passwordholder.getText();
     //Validators loginChecker=validationForLogInPage.UserName(UserName,password);
     try{
-      Validators.validationForLogInPage v =new validationForLogInPage();
-      v.UserName(UserName,password);
+     // Validators.validationForLogInPage v =new validationForLogInPage();
+      //UserName(UserName,password);
       AdminStage();
     }catch (Exception e){
       Stage primaryStage = (Stage) this.LogInButton.getScene().getWindow();

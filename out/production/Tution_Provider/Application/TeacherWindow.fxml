@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -10,10 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="662.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.TeacherWindowController">
+<AnchorPane prefHeight="702.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.TeacherWindowController">
    <children>
-      <VBox layoutX="219.0" layoutY="21.0" prefHeight="530.0" prefWidth="395.0">
+      <VBox layoutX="388.0" layoutY="54.0" prefHeight="530.0" prefWidth="395.0">
          <children>
             <Pane prefHeight="79.0" prefWidth="414.0">
                <children>
@@ -22,7 +22,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="FirstName" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="414.0">
@@ -32,7 +32,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="LastNameTextField" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="89.0" prefHeight="79.0" prefWidth="414.0">
@@ -42,7 +42,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="175.0" layoutY="27.0" prefHeight="25.0" prefWidth="198.0" />
+                  <DatePicker fx:id="DateOfBirthField" layoutX="175.0" layoutY="27.0" prefHeight="25.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="168.0" prefHeight="79.0" prefWidth="414.0">
@@ -52,7 +52,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="PhoneNuberField" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="248.0" prefHeight="79.0" prefWidth="414.0">
@@ -62,7 +62,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="EmailFiled" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="327.0" prefHeight="79.0" prefWidth="414.0">
@@ -72,7 +72,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
+                  <TextField fx:id="NationalIdField" layoutX="175.0" layoutY="27.0" prefHeight="28.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="369.0" prefHeight="79.0" prefWidth="414.0">
@@ -82,7 +82,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ComboBox layoutX="175.0" layoutY="29.0" prefHeight="25.0" prefWidth="198.0" />
+                  <ComboBox fx:id="GenderFIeld" layoutX="175.0" layoutY="29.0" prefHeight="25.0" prefWidth="198.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="380.0" prefHeight="180.0" prefWidth="395.0">
@@ -92,7 +92,8 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="85.0" fitWidth="126.0" layoutX="232.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ImageViewerField" fitHeight="95.0" fitWidth="126.0" layoutX="233.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="ChoosePhotoButton" layoutX="90.0" layoutY="65.0" mnemonicParsing="false" onAction="#handelChoosphotoevent" prefHeight="25.0" prefWidth="95.0" text="Choose Photo" />
                </children>
             </Pane>
          </children>
