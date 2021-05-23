@@ -1,5 +1,4 @@
-import DataClass.person;
-import Functionalities.tutor;
+import DataClass.*;
 
 import java.io.*;
 import java.lang.String;
