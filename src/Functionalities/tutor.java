@@ -1,9 +1,12 @@
 package DataClass;
 
 
+import DataClass.person;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class tutor extends person {
+public class tutor extends person implements Serializable {
   
   public tutor(String firstName, String lastName, String nationalId, String gender, String phoneNumber, Date dateOfBirth, String institutionName, String emailAddress) {
     super(firstName, lastName, nationalId, gender, phoneNumber, dateOfBirth, institutionName, emailAddress);
