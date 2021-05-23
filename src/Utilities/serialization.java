@@ -1,12 +1,16 @@
 package Utilities;
 
-import DataClass.tutor;
+import DataClass.person;
+
 
 import java.io.*;
+import java.lang.String;
+
 import java.util.ArrayList;
 
+
 public class serialization {
-  public static boolean serialized(String pathToFile, ArrayList<tutor>listOftutor){
+  public static boolean serialized(String pathToFile, ArrayList<person.tutor>listOftutor){
     File file=new File(pathToFile);
     FileOutputStream fileOutputStream;
     ObjectOutputStream objectOutputStream;
@@ -19,15 +23,15 @@ public class serialization {
       return false;
     }
   }
-  public static ArrayList<tutor>deserialize(String pathToFile){
+  public static ArrayList<person.tutor>deserialize(String pathToFile){
     File file=new File(pathToFile);
-    ArrayList<tutor> listOftutor=null;
+    ArrayList<person.tutor> listOftutor=null;
     FileInputStream fileInputStream=null;
     ObjectInputStream objectInputStream=null;
     try {
       fileInputStream=new FileInputStream(file);
       objectInputStream=new  ObjectInputStream(fileInputStream);
-      listOftutor=(ArrayList<tutor>) objectInputStream.readObject();
+      listOftutor=(ArrayList<person.tutor>) objectInputStream.readObject();
     }
     catch (Exception exception){
       System.err.println(exception.getMessage());
