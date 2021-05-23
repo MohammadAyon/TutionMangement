@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -9,7 +10,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="662.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.TeacherWindowController">
    <children>
@@ -27,7 +27,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="414.0">
                <children>
-                  <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="106.0" text="Lasst Name">
+                  <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="106.0" text="Last Name">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -47,7 +47,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="168.0" prefHeight="79.0" prefWidth="414.0">
                <children>
-                  <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="126.0" text="Phone NUmber">
+                  <Label layoutX="23.0" layoutY="27.0" prefHeight="28.0" prefWidth="126.0" text="Phone Number">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -93,6 +93,12 @@
                      </font>
                   </Label>
                   <ImageView fitHeight="85.0" fitWidth="126.0" layoutX="232.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button layoutX="96.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Choose Profile  Picture" />
+                  <ImageView fitHeight="100.0" fitWidth="166.0" layoutX="145.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="107.0" fitWidth="175.0" layoutX="145.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="100.0" fitWidth="126.0" layoutX="254.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button layoutX="119.0" layoutY="104.0" mnemonicParsing="false" text="Save" />
+                  <Button layoutX="269.0" layoutY="105.0" mnemonicParsing="false" text="Clear" />
                </children>
             </Pane>
          </children>

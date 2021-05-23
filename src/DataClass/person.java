@@ -3,8 +3,6 @@ package DataClass;
 import java.io.Serializable;
 import java.util.Date;
 
-import java.util.Date;
-
 public class person implements Serializable {
  private  String firstName;
  private String lastName;
@@ -86,7 +84,23 @@ public String toString(){
             emailAddress+'\''+'}';
    
 }
-
-
-}
+  
+  
+  public static class tutor extends person implements Serializable {
+    
+    public tutor(String firstName, String lastName, String nationalId, String gender, String phoneNumber, Date dateOfBirth, String institutionName, String emailAddress) {
+      super(firstName, lastName, nationalId, gender, phoneNumber, dateOfBirth, institutionName, emailAddress);
+    }
+    @Override
+    public String getFirstName() {
+      return super.getFirstName();
+    }
+    
+    @Override
+    public void setFirstName(String firstName) {
+      super.setFirstName(firstName);
+    
+    
+  }
+}}
 

@@ -12,23 +12,23 @@ import java.util.Objects;
 
 public class Main extends Application {
     static Stage window= new Stage();
-
+    
     @Override
     public void start(Stage primaryStage) throws Exception{
         window=primaryStage;
-
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TeacherWindow.fxml")));
-
+        
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AdminDashBoard.fxml")));
+        
         primaryStage.setTitle("tution management system!");
         Scene scene=new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();
         primaryStage.getIcons().add(new Image("Icons.png"));
         primaryStage.show();
-
+        
     }
-
-
+    
+    
     public static void main(String[] args) {
         launch(args);
     }
