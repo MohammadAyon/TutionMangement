@@ -16,7 +16,6 @@ public class tutor extends person {
   @Override
   public void setFirstName(String firstName) {
     super.setFirstName(firstName);
-  }
   
   @Override
   public String getLastName() {

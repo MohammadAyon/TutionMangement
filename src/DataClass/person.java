@@ -1,6 +1,5 @@
 package DataClass;
-
-import java.util.Date;
+import  Validators.*;
 
 import java.util.Date;
 
@@ -30,51 +29,73 @@ public class person {
   return firstName;
  
  }
- public void setFirstName(String firstName){
-  this.firstName=firstName;
+ public void setFirstName(String firstName) throws Exception {
+  Validators.Validations.nameFirst(firstName);
+   this.firstName=firstName;
  }
  public String getLastName(){
   return lastName;
  }
- public void setLastName(String lastName){
-  this.lastName=lastName;
+
+ public void setLastName(String lastName) throws Exception {
+  Validators.Validations.nameLast(lastName);
+   this.lastName=lastName;
  }
+
  public String getNationalId(){
   return nationalId;
  }
- public void setNationalId(String nationalId){
-  this.nationalId=nationalId;
+
+ public void setNationalId(String nationalId) throws Exception {
+   Validators.Validations.nationalId(nationalId);
+   this.nationalId=nationalId;
  }
+
 public String getGender(){
   return gender;
 }
-public void setGender(String gender){
+
+public void setGender(String gender) throws Exception{
+  Validators.Validations.gender(gender);
   this.gender=gender;
 }
+
 public String getPhoneNumber(){
   return phoneNumber;
 }
-public void setPhoneNumber(String phoneNumber){
+
+public void setPhoneNumber(String phoneNumber) throws Exception{
+  Validators.Validations.phoneNumber(phoneNumber);
   this.phoneNumber=phoneNumber;
 }
+
 public Date getDateOfBirth(){
   return dateOfBirth;
 }
-public void setDateOfBirth(Date dateOfBirth){
-  this.dateOfBirth=dateOfBirth;
+
+public void setDateOfBirth(Date dateOfBirth) throws Exception {
+  Validators.Validations.dateOfBirth(dateOfBirth);
+   this.dateOfBirth=dateOfBirth;
 }
+
 public String getInstitutionName(){
   return  institutionName;
 }
-public void setInstitutionName(String institutionName){
-  this.institutionName=institutionName;
+
+public void setInstitutionName(String institutionName) throws Exception {
+  Validators.Validations.institutionName(institutionName);
+   this.institutionName=institutionName;
 }
+
 public String getEmailAddress(){
   return  emailAddress;
 }
-public void setEmailAddress(String emailAddress){
-  this.emailAddress=emailAddress;
+
+public void setEmailAddress(String emailAddress) throws Exception {
+  Validators.Validations.email(emailAddress);
+   this.emailAddress=emailAddress;
 }
+
 public String toString(){
    return "person{"+"firstName='"+firstName+'\''+
             ",lastName='"+lastName+'\''+",nationalId='"+nationalId+'\''+",gender='"+gender+'\''+",phoneNummber='"+

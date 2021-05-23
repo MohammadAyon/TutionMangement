@@ -1,15 +1,15 @@
 package Validators;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import Exceptions.*;
 
-public class Validations {        // create a method check validations and use the exceptions for individual exception
-  //To throw message I suggest create a individual method for every validation to use in conditional statement
+public class Validations {
 
-  public static boolean firstName(String name) throws Exception {
+  public static boolean nameFirst(String name) throws Exception {
     if (isNotNull(name) && name.length() > 3) {
       return true;
     }
@@ -17,7 +17,7 @@ public class Validations {        // create a method check validations and use t
     throw new Exception("Please provide your first name properly.");
   }
 
-  public static boolean lastName(String name) throws Exception {
+  public static boolean nameLast(String name) throws Exception {
     if (isNotNull(name) && name.length() > 3) {
       return true;
     }
@@ -59,7 +59,7 @@ public class Validations {        // create a method check validations and use t
     throw new Exception("Please provide your phone number properly.");
   }
 
-  public static boolean dateOfBirth(String date) throws Exception {
+  public static boolean dateOfBirth(String  date) throws Exception {
     if (isNotNull(date)) {
       return true;
     }
